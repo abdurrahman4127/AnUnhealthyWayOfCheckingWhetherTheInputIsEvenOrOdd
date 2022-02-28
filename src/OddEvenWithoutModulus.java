@@ -1,15 +1,14 @@
 // note : fractions are neither odd nor even
 
-import java.util.InputMismatchException;
-import java.util.Scanner;
+import java.util.*;
 
-public class OddEven {
+public class OddEvenWithoutModulus {
     public static void main(String[] args)
     {
         while (true) {
-            System.out.print("enter a number to check if its even or odd : ");
+            System.out.print("enter a number to check whether it's even or odd : ");
 
-            try{
+            try {
                 Scanner scanner = new Scanner(System.in);
                 int n = scanner.nextInt();
 
@@ -20,20 +19,20 @@ public class OddEven {
                 }
             }
 
-            catch (InputMismatchException e){
-                System.out.println("you're supposed to enter a number — not character(s) \n");
+            catch (InputMismatchException e) {
+                System.out.println("you're supposed to enter an integer number — not character(s) \n");
             }
         }
     }
 
     private static boolean isItEvenOrOdd(int n) {
         // for positive inputs
-        while (n > 2){
+        while (n > 2) {
             n -= 2;
         }
 
         // in case of negative inputs
-        while (n < 0){
+        while (n < 0) {
             n += 2;
         }
 
