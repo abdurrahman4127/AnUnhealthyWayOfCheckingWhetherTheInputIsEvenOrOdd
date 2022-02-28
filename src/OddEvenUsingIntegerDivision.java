@@ -5,10 +5,11 @@ public class OddEvenUsingIntegerDivision {
     {
         while (true) {
             System.out.print("enter a number to check whether it's even or odd : ");
+            
             Scanner scanner = new Scanner(System.in);
-
             int n = scanner.nextInt();
-            int temp = n / 2;
+            
+            int temp = n / 2;  // storing the result of integer division 
 
             if(temp*2 == n) {
                 System.out.println(n + " is even \n");
